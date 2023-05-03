@@ -1,0 +1,25 @@
+<div class="row w-100">
+  <div class="col-sm-3">
+    <!-- <dl>
+            <dt *ngFor="let char of characters"> <img [src]="char.photoUrl" class="rounded-circle" data-holder-rendered="true" width="35" height="35" alt=""> {{char.name}} </dt>
+        </dl> -->
+    <div class="row my-2" *ngFor="let char of characters">
+      <div class="col-3">
+        <img
+          [src]="char.photoUrl"
+          class="rounded-circle"
+          data-holder-rendered="true"
+          width="35"
+          height="35"
+          alt=""
+        />
+      </div>
+      <div class="col-9 px-0">{{ char.name }}</div>
+    </div>
+  </div>
+  <div class="col-sm-9 border">
+    <div class="">asd</div>
+  </div>
+</div>
+
+<input type="text" #myInput (input)="inFunction(myInput.value)" />

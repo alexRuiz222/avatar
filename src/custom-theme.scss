@@ -1,0 +1,33 @@
+// Custom Theming for Angular Material
+$earth-color:#6B823A;
+$fire-color:#B12B3B;
+$air-color:#D6D9F1;
+$water-color:#74B8EB;
+$avatar-color:#b6dcf8;
+$paper-color: #dfd0a1;
+$primary-color: #DCC8A5;
+$blue-color: #1B3858;
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$avatar-primary: mat.define-palette(( 50: lighten($primary-color, 85%), 100: lighten($primary-color, 70%), 200: lighten($primary-color, 55%), 300: lighten($primary-color, 40%), 400: lighten($primary-color, 25%), 500: $primary-color, 600: darken($primary-color, 10%), 700: darken($primary-color, 20%), 800: darken($primary-color, 30%), 900: darken($primary-color, 40%), A100: lighten($primary-color, 70%), A200: lighten($primary-color, 50%), A400: darken($primary-color, 20%), A700: darken($primary-color, 30%), contrast: ( 50: black, 100: black, 200: black, 300: black, 400: black, 500: white, 600: white, 700: white, 800: white, 900: white, A100: black, A200: black, A400: black, A700: white, )));
+// $avatar-primary: mat.define-palette(mat.$indigo-palette);
+$avatar-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$avatar-warn: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$avatar-theme: mat.define-light-theme(( color: ( primary: $avatar-primary, accent: $avatar-accent, warn: $avatar-warn)));
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($avatar-theme);
+
+/* You can add global styles to this file, and also import other style files */

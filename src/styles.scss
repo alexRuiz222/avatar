@@ -1,1 +1,114 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
+@import 'custom-theme';
+@font-face {
+    font-family: 'Herculanum';
+    src: url('assets/fonts/Herculanum Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    // font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+    font-family: 'Herculanum', sans-serif !important;
+}
+
+input {
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.center-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // align-items: center;
+    // max-width: 100vw;
+    // margin: auto;
+}
+
+.bg-earth {
+    background-color: $earth-color;
+}
+
+.bg-fire {
+    background-color: $fire-color;
+}
+
+.bg-air {
+    background-color: $air-color;
+}
+
+.bg-water {
+    background-color: $water-color;
+}
+
+.bg-avatar {
+    background-color: $avatar-color;
+}
+
+.bg-blue {
+    background-color: $blue-color;
+}
+
+.bg-paper {
+    background-color: $paper-color;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.burned-paper {
+    // border: 3px solid #57432B;
+    background-image: url('assets/images/old-paper.avif');
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5) inset;
+    color: #57452D;
+    font-weight: bold;
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+.child-content {
+    background: linear-gradient(to bottom, #416E7C, #B8BBA6);
+    border-radius: 5px;
+    margin: 30px;
+    // margin-top: 150px;
+    padding: 25px;
+    position: relative;
+    min-height: 75vh;
+}
+
+.corner-image {
+    position: absolute;
+    top: -100px;
+    left: -23px;
+    z-index: 1;
+    width: 180px;
+}
+
+.dust-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.aang-img {
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 9%;
+    right: 6%;
+}
